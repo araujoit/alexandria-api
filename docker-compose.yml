@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  api:
+    image: araujoit/alexandria-api:stage
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+      cache_from:
+        - maven:3.8.4-jdk-11-slim
+        - araujoit/alexandria-api:stage
+    ports:
+      - 8080:8080

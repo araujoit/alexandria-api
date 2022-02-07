@@ -1,0 +1,12 @@
+#
+# Package stage
+#
+FROM openjdk:17-alpine
+
+ENV TZ="America/Sao_Paulo"
+
+WORKDIR /app
+
+COPY target/alexandria-api-0.0.1-SNAPSHOT.jar app.jar
+COPY src/main/resources/application.properties application.properties
+CMD ["java","-jar","app.jar"]
