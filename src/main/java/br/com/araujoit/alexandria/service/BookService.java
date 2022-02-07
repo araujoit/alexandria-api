@@ -60,6 +60,8 @@ public class BookService {
 			return null;
 		}
 
+		bookRepository.deleteById(id);
+
 		Book book = foundBook.get();
 		return new BookDto(book);
 	}
