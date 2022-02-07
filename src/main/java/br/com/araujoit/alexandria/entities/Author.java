@@ -56,6 +56,14 @@ public class Author {
 		this.name = name;
 	}
 	
+	public List<Book> getBooks() {
+		return books;
+	}
+	
+	public void setBooks(List<Book> books) {
+		this.books = books;
+	}
+	
 	public List<Publisher> getPublishers() {
 		return publishers;
 	}
